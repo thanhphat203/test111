@@ -236,48 +236,64 @@
     <title>Tạo Tài Khoản</title>
     <style>
         .account-container {
-            max-width: 600px; /* Chiều rộng tối đa của container */
-            margin: 20px auto; /* Căn giữa */
-            padding: 20px; /* Khoảng cách bên trong */
-            border: 2px solid #28a745; /* Viền màu xanh lá cây */
-            border-radius: 10px; /* Bo tròn góc */
-            background-color: #f9f9f9; /* Màu nền */
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #28a745;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            position: relative;
         }
 
         .account-container h2 {
-            color: #28a745; /* Màu xanh lá cây cho tiêu đề */
+            color: #28a745;
         }
 
         .account-item {
-            display: flex; /* Sử dụng flexbox */
-            justify-content: space-between; /* Căn đều giữa các phần tử */
-            align-items: center; /* Căn giữa theo chiều dọc */
-            padding: 10px 0; /* Khoảng cách giữa các mục */
-            border-bottom: 1px solid #ddd; /* Đường viền giữa các mục */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
         }
 
         .account-item:last-child {
-            border-bottom: none; /* Bỏ viền cho mục cuối */
+            border-bottom: none;
         }
 
         .account-item span {
-            color: #28a745; /* Màu xanh lá cây cho tên tài khoản */
-            font-weight: bold; /* In đậm tên tài khoản */
+            color: #28a745;
+            font-weight: bold;
         }
 
         .account-button {
-            padding: 8px 16px; /* Khoảng cách bên trong nút */
-            font-size: 14px; /* Kích thước chữ */
-            color: #fff; /* Màu chữ */
-            background: linear-gradient(90deg, #00aaff, #00ff99); /* Màu nền gradient */
-            border: none; /* Không viền */
-            border-radius: 5px; /* Bo tròn góc */
-            text-decoration: none; /* Bỏ gạch chân */
-            transition: background 0.3s; /* Hiệu ứng chuyển màu */
+            padding: 8px 16px;
+            font-size: 14px;
+            color: #fff;
+            background: linear-gradient(90deg, #00aaff, #00ff99);
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 170, 255, 0.5);
         }
 
         .account-button:hover {
-            background: linear-gradient(90deg, #0088cc, #00cc77); /* Màu nền khi hover */
+            background: linear-gradient(90deg, #0088cc, #00cc77);
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 170, 255, 0.7);
+            animation: pulse 0.6s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .account-button.clicked {
+            transform: scale(0.95);
+            transition: transform 0.1s ease;
         }
     </style>
 </head>
@@ -301,9 +317,19 @@
             <a href="https://www.bitget.com/en/register" class="account-button">Tạo Tài Khoản</a>
         </div>
     </div>
+
+    <script>
+        document.querySelectorAll('.account-button').forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.add('clicked');
+                setTimeout(() => {
+                    this.classList.remove('clicked');
+                }, 200);
+            });
+        });
+    </script>
 </body>
 </html>
-
 
 
 
