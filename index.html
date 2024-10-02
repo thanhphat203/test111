@@ -70,74 +70,53 @@
     <style>
         body {
             background-color: #f4f4f4; /* Màu nền trang */
-            font-family: 'Helvetica Neue', Arial, sans-serif; /* Phông chữ hiện đại */
+            font-family: Arial, sans-serif; /* Phông chữ */
             margin: 0; /* Bỏ margin mặc định */
             padding: 20px; /* Padding cho toàn bộ body */
         }
 
-        .container {
-            max-width: 1200px; /* Chiều rộng tối đa cho container */
-            margin: 0 auto; /* Căn giữa */
-            padding: 20px; /* Padding cho container */
-        }
-
-        .text-center {
-            text-align: center; /* Căn giữa nội dung */
-            margin-bottom: 20px; /* Khoảng cách dưới */
+        .sidebar {
+            background-color: #fff; /* Màu nền trắng */
+            border-radius: 8px; /* Bo tròn góc */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+            padding: 20px;
+            text-align: center;
         }
 
         .ft-logo {
             width: 100px; /* Kích thước logo */
-            margin-bottom: 20px; /* Khoảng cách dưới logo */
-            border-radius: 50%; /* Bo tròn logo */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Đổ bóng cho logo */
-            transition: transform 0.3s; /* Hiệu ứng chuyển động */
-        }
-
-        .ft-logo:hover {
-            transform: scale(1.1); /* Phóng to logo khi hover */
+            margin-bottom: 15px; /* Khoảng cách dưới logo */
         }
 
         .title {
-            position: relative; /* Để áp dụng hiệu ứng */
-            display: inline-block; /* Để khung tròn tự động điều chỉnh */
-            padding: 15px 20px; /* Khoảng cách bên trong */
-            border-radius: 50px; /* Bo tròn góc */
-            background-color: #ffffff; /* Màu nền trắng */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
-            transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển động */
+            color: #28a745; /* Màu xanh lá cây cho tiêu đề */
+            font-size: 24px; /* Kích thước chữ lớn */
+            position: relative; /* Để sử dụng cho hiệu ứng */
+            display: inline-block; /* Để có thể căn giữa */
+            transition: color 0.3s ease; /* Hiệu ứng chuyển màu */
         }
 
         .title:hover {
-            transform: scale(1.05); /* Phóng to nhẹ khi hover */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng khi hover */
+            color: #218838; /* Màu khi hover */
+            animation: bounce 0.5s; /* Hiệu ứng nhấp nháy */
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
         }
 
         .badge {
-            display: inline-block; /* Hiển thị badge bên cạnh tên */
-            margin-top: 5px; /* Khoảng cách giữa tên và badge */
-            padding: 5px 10px; /* Padding cho badge */
-            border-radius: 15px; /* Bo tròn góc badge */
-            background-color: #d3d3d3; /* Màu nền của badge */
-            font-size: 14px; /* Kích thước chữ trong badge */
-            color: #333; /* Màu chữ */
-        }
-
-        .td-verify {
-            width: 20px; /* Kích thước biểu tượng xác thực */
-            margin-left: 5px; /* Khoảng cách bên trái biểu tượng */
-            vertical-align: middle; /* Căn giữa theo chiều dọc */
-        }
-
-        /* Hiệu ứng động cho tên */
-        .td-name {
-            display: inline-block; /* Để hiệu ứng chuyển động có tác dụng */
-            transition: color 0.3s, transform 0.3s; /* Hiệu ứng chuyển màu và chuyển động */
-        }
-
-        .td-name:hover {
-            color: #28a745; /* Màu chữ khi hover */
-            transform: scale(1.1); /* Phóng to nhẹ */
+            color: #6c757d; /* Màu badge */
+            font-size: 14px; /* Kích thước chữ badge */
+            margin-top: 5px; /* Khoảng cách trên badge */
         }
     </style>
 </head>
@@ -151,10 +130,8 @@
                         <div class="text-center">
                             <img class="ft-logo" src="https://i.imgur.com/SIjma8Q.png" alt="Logo" />
                             <h3 class="title title--h3 sidebar__user-name td-name">
-                                <span class="weight--500">THÀNH PHÁT 
-                                    <img class="td-verify" src="https://i.imgur.com/L0GmCbu.png" alt="Xác thực" />
-                                </span>
-                                <br>
+                                <span class="weight--500 td-name">THÀNH PHÁT <img class="td-verify"
+                                        src="https://i.imgur.com/L0GmCbu.png" alt="Verify" /></span><br>
                                 <div class="badge badge--gray td-bio">@U2UNETWORK🔥</div>
                             </h3>
                         </div>
