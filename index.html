@@ -238,11 +238,10 @@
     <title>Tạo Tài Khoản</title>
     <style>
         body {
-            background-color: #2c2c2c; /* Màu nền tối hơn */
-            font-family: 'Georgia', serif; /* Phông chữ cổ điển */
+            background-color: #e0e0e0; /* Màu nền trang nhẹ nhàng, trung tính */
+            font-family: 'Arial', sans-serif; /* Phông chữ đơn giản và hiện đại */
             margin: 0; /* Bỏ margin mặc định */
             padding: 20px; /* Padding cho toàn bộ body */
-            color: #f5f5f5; /* Màu chữ sáng hơn */
         }
 
         .account-container {
@@ -250,15 +249,16 @@
             margin: auto; /* Căn giữa */
             padding: 30px; /* Khoảng cách bên trong */
             border-radius: 10px; /* Bo tròn góc */
-            background-color: #3b3b3b; /* Màu nền tối cho container */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Đổ bóng tối hơn */
+            background-color: #ffffff; /* Màu nền trắng */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
         }
 
         .account-container h2 {
-            color: #c0c0c0; /* Màu sáng cho tiêu đề */
+            color: #003f3f; /* Màu xanh đen cho tiêu đề */
             text-align: center; /* Căn giữa tiêu đề */
             margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
-            font-size: 24px; /* Kích thước chữ tiêu đề lớn hơn */
+            font-size: 28px; /* Kích thước chữ tiêu đề lớn hơn */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng cho tiêu đề */
         }
 
         .account-item {
@@ -266,29 +266,40 @@
             justify-content: space-between; /* Căn đều giữa các phần tử */
             align-items: center; /* Căn giữa theo chiều dọc */
             padding: 15px; /* Khoảng cách giữa các mục */
-            border: 2px solid #666; /* Đường viền màu xám tối */
+            border: 2px solid #00796b; /* Đường viền màu xanh sáng */
             border-radius: 8px; /* Bo tròn góc */
             margin-bottom: 15px; /* Khoảng cách giữa các mục */
-            transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển động */
-            background-color: #484848; /* Màu nền cho các mục tối hơn */
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; /* Hiệu ứng chuyển động */
+            background-color: #e0f2f1; /* Màu nền cho các mục sáng hơn */
         }
 
         .account-item:hover {
-            transform: translateY(-3px); /* Di chuyển nhẹ lên khi hover */
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Đổ bóng khi hover */
+            transform: translateY(-5px); /* Di chuyển nhẹ lên khi hover */
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15); /* Đổ bóng khi hover */
+            border-color: #004d40; /* Đổi màu viền khi hover */
         }
 
         .account-item span {
-            color: #e0e0e0; /* Màu chữ cho tên tài khoản sáng hơn */
+            color: #004d40; /* Màu xanh đen cho tên tài khoản */
             font-weight: bold; /* In đậm tên tài khoản */
-            font-size: 20px; /* Kích thước chữ lớn hơn */
+            font-size: 24px; /* Kích thước chữ lớn hơn */
+            background: linear-gradient(90deg, #00796b, #004d40); /* Hiệu ứng gradient cho chữ */
+            -webkit-background-clip: text; /* Cắt nền cho chữ */
+            -webkit-text-fill-color: transparent; /* Làm cho chữ trong suốt */
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6); /* Hiệu ứng bóng cho chữ */
+            animation: glow 1.5s infinite alternate; /* Thêm hiệu ứng nhấp nháy */
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5); }
+            100% { text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.5); }
         }
 
         .account-button {
-            padding: 10px 15px; /* Khoảng cách bên trong nút */
+            padding: 12px 20px; /* Khoảng cách bên trong nút */
             font-size: 16px; /* Kích thước chữ */
             color: #ffffff; /* Màu chữ */
-            background-color: #555; /* Màu nền cho nút tối hơn */
+            background-color: #00796b; /* Màu xanh sáng cho nút */
             border: none; /* Không viền */
             border-radius: 5px; /* Bo tròn góc */
             text-decoration: none; /* Bỏ gạch chân */
@@ -296,8 +307,8 @@
         }
 
         .account-button:hover {
-            background-color: #777; /* Màu nền khi hover */
-            transform: scale(1.05); /* Phóng to nhẹ khi hover */
+            background-color: #004d40; /* Màu nền khi hover */
+            transform: scale(1.1); /* Phóng to nhẹ khi hover */
         }
     </style>
 </head>
