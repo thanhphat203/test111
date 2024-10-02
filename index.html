@@ -255,12 +255,11 @@
         }
 
         .account-container h2 {
-            color: #a60000; /* Màu đỏ cho tiêu đề */
+            color: #005f5f; /* Màu xanh đậm cho tiêu đề */
             text-align: center; /* Căn giữa tiêu đề */
             margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
             font-size: 28px; /* Kích thước chữ tiêu đề */
             font-weight: 700; /* In đậm tiêu đề */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng cho tiêu đề */
         }
 
         .account-item {
@@ -268,31 +267,52 @@
             justify-content: space-between; /* Căn đều giữa các phần tử */
             align-items: center; /* Căn giữa theo chiều dọc */
             padding: 15px; /* Khoảng cách giữa các mục */
-            border: 2px solid #00796b; /* Đường viền màu xanh sáng */
+            border: 2px solid #005f5f; /* Đường viền màu xanh đậm */
             border-radius: 8px; /* Bo tròn góc */
             margin-bottom: 15px; /* Khoảng cách giữa các mục */
             transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; /* Hiệu ứng chuyển động */
-            background-color: #ffebee; /* Màu nền sáng hơn với tông đỏ */
+            background-color: #e0f2f1; /* Màu nền sáng hơn với tông xanh */
         }
 
         .account-item:hover {
-            transform: translateY(-5px); /* Di chuyển nhẹ lên khi hover */
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15); /* Đổ bóng khi hover */
-            border-color: #004d40; /* Đổi màu viền khi hover */
+            transform: translateY(-3px); /* Di chuyển nhẹ lên khi hover */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng khi hover */
+            border-color: #003f3f; /* Đổi màu viền khi hover */
         }
 
         .account-item span {
-            color: #333; /* Màu tối hơn cho tên tài khoản */
+            color: #004d40; /* Màu xanh đậm cho tên tài khoản */
             font-weight: bold; /* In đậm tên tài khoản */
-            font-size: 24px; /* Kích thước chữ lớn hơn */
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng cho chữ */
+            font-size: 22px; /* Kích thước chữ lớn hơn */
+            transition: transform 0.3s, color 0.3s; /* Hiệu ứng chuyển động cho chữ */
+        }
+
+        /* Hiệu ứng động riêng cho từng tên tài khoản */
+        .account-item span.okx:hover {
+            color: #008080; /* Đổi màu khi hover */
+            transform: scale(1.1); /* Phóng to nhẹ khi hover */
+        }
+
+        .account-item span.binance:hover {
+            color: #00796b; /* Đổi màu khi hover */
+            transform: rotate(3deg); /* Xoay nhẹ khi hover */
+        }
+
+        .account-item span.bybit:hover {
+            color: #00695c; /* Đổi màu khi hover */
+            transform: translateX(3px); /* Di chuyển sang phải khi hover */
+        }
+
+        .account-item span.bitget:hover {
+            color: #005b52; /* Đổi màu khi hover */
+            transform: scale(1.05); /* Phóng to nhẹ khi hover */
         }
 
         .account-button {
             padding: 12px 24px; /* Khoảng cách bên trong nút */
             font-size: 16px; /* Kích thước chữ */
             color: #ffffff; /* Màu chữ */
-            background-color: #00796b; /* Màu xanh cho nút */
+            background-color: #005f5f; /* Màu xanh đậm cho nút */
             border: none; /* Không viền */
             border-radius: 25px; /* Bo tròn góc nhiều hơn */
             text-decoration: none; /* Bỏ gạch chân */
@@ -303,7 +323,7 @@
         }
 
         .account-button:hover {
-            background-color: #005b5b; /* Màu nền khi hover */
+            background-color: #004d40; /* Màu nền khi hover */
             transform: scale(1.05); /* Phóng to nhẹ khi hover */
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Đổ bóng mạnh hơn khi hover */
         }
@@ -313,19 +333,19 @@
     <div class="account-container">
         <h2>Tạo Tài Khoản Ngay!</h2>
         <div class="account-item">
-            <span>OKX</span>
+            <span class="okx">OKX</span>
             <a href="https://okx.com/join/65298538" class="account-button">Tạo Tài Khoản</a>
         </div>
         <div class="account-item">
-            <span>Binance</span>
+            <span class="binance">Binance</span>
             <a href="https://www.binance.com/en/register" class="account-button">Tạo Tài Khoản</a>
         </div>
         <div class="account-item">
-            <span>Bybit</span>
+            <span class="bybit">Bybit</span>
             <a href="https://www.bybit.com/en-US/register?ref=XXXXXX" class="account-button">Tạo Tài Khoản</a>
         </div>
         <div class="account-item">
-            <span>Bitget</span>
+            <span class="bitget">Bitget</span>
             <a href="https://www.bitget.com/en/register" class="account-button">Tạo Tài Khoản</a>
         </div>
     </div>
