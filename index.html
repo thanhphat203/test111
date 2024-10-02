@@ -257,7 +257,7 @@
             color: #003f3f; /* Màu xanh đen cho tiêu đề */
             text-align: center; /* Căn giữa tiêu đề */
             margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
-            font-size: 28px; /* Kích thước chữ tiêu đề lớn hơn */
+            font-size: 26px; /* Kích thước chữ tiêu đề lớn hơn */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng cho tiêu đề */
         }
 
@@ -282,7 +282,7 @@
         .account-item span {
             color: #004d40; /* Màu xanh đen cho tên tài khoản */
             font-weight: bold; /* In đậm tên tài khoản */
-            font-size: 24px; /* Kích thước chữ lớn hơn */
+            font-size: 20px; /* Kích thước chữ gọn hơn */
             background: linear-gradient(90deg, #00796b, #004d40); /* Hiệu ứng gradient cho chữ */
             -webkit-background-clip: text; /* Cắt nền cho chữ */
             -webkit-text-fill-color: transparent; /* Làm cho chữ trong suốt */
@@ -296,19 +296,21 @@
         }
 
         .account-button {
-            padding: 12px 20px; /* Khoảng cách bên trong nút */
+            padding: 10px 18px; /* Khoảng cách bên trong nút */
             font-size: 16px; /* Kích thước chữ */
             color: #ffffff; /* Màu chữ */
             background-color: #00796b; /* Màu xanh sáng cho nút */
             border: none; /* Không viền */
-            border-radius: 5px; /* Bo tròn góc */
+            border-radius: 25px; /* Bo tròn góc hơn để tạo hình dạng hiện đại */
             text-decoration: none; /* Bỏ gạch chân */
-            transition: background 0.3s, transform 0.3s; /* Hiệu ứng chuyển màu và chuyển động */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng cho nút */
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển màu và chuyển động */
         }
 
         .account-button:hover {
             background-color: #004d40; /* Màu nền khi hover */
-            transform: scale(1.1); /* Phóng to nhẹ khi hover */
+            transform: scale(1.05); /* Phóng to nhẹ khi hover */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Đổ bóng mạnh hơn khi hover */
         }
     </style>
 </head>
