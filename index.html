@@ -236,23 +236,36 @@
     <title>Tạo Tài Khoản</title>
     <style>
         body {
-            background-color: #eef2f3; /* Màu nền trang */
-            font-family: Arial, sans-serif; /* Phông chữ */
+            background-color: #121212; /* Nền tối */
+            font-family: 'Helvetica Neue', Arial, sans-serif; /* Phông chữ hiện đại */
+            color: #ffffff; /* Màu chữ trắng */
+            margin: 0; /* Bỏ margin mặc định */
+            display: flex; /* Căn giữa */
+            justify-content: center; /* Căn giữa */
+            align-items: center; /* Căn giữa */
+            height: 100vh; /* Chiều cao toàn bộ viewport */
         }
 
         .account-container {
-            max-width: 600px; /* Chiều rộng tối đa của container */
-            margin: 20px auto; /* Căn giữa */
+            max-width: 600px; /* Chiều rộng tối đa */
+            margin: 20px; /* Khoảng cách bên ngoài */
             padding: 20px; /* Khoảng cách bên trong */
-            border: 2px solid #28a745; /* Viền màu xanh lá cây */
             border-radius: 10px; /* Bo tròn góc */
-            background-color: #f9f9f9; /* Màu nền */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+            background-color: #1e1e1e; /* Nền tối cho container */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Đổ bóng */
+            transition: transform 0.3s; /* Hiệu ứng chuyển động */
+        }
+
+        .account-container:hover {
+            transform: translateY(-5px); /* Nâng lên khi hover */
         }
 
         .account-container h2 {
             color: #28a745; /* Màu xanh lá cây cho tiêu đề */
             text-align: center; /* Căn giữa tiêu đề */
+            margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+            font-size: 24px; /* Kích thước chữ lớn hơn */
+            text-transform: uppercase; /* Chữ in hoa */
         }
 
         .account-item {
@@ -260,39 +273,45 @@
             justify-content: space-between; /* Căn đều giữa các phần tử */
             align-items: center; /* Căn giữa theo chiều dọc */
             padding: 15px 0; /* Khoảng cách giữa các mục */
-            border-bottom: 1px solid #ddd; /* Đường viền giữa các mục */
-            transition: transform 0.3s; /* Hiệu ứng chuyển động */
+            border-bottom: 1px solid #333; /* Đường viền giữa các mục */
+            transition: background 0.3s, transform 0.3s; /* Hiệu ứng chuyển màu và chuyển động */
         }
 
         .account-item:last-child {
             border-bottom: none; /* Bỏ viền cho mục cuối */
         }
 
+        .account-item:hover {
+            background-color: rgba(40, 167, 69, 0.1); /* Màu nền khi hover */
+            transform: translateY(-3px); /* Nâng lên khi hover */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Đổ bóng nhẹ khi hover */
+        }
+
         .account-item span {
             color: #28a745; /* Màu xanh lá cây cho tên tài khoản */
             font-weight: bold; /* In đậm tên tài khoản */
             font-size: 18px; /* Kích thước chữ lớn hơn */
-            transition: color 0.3s, transform 0.3s; /* Hiệu ứng chuyển màu và chuyển động */
+            transition: color 0.3s; /* Hiệu ứng chuyển màu */
         }
 
         .account-item span:hover {
-            color: #007bff; /* Màu chữ khi hover */
-            transform: scale(1.1); /* Phóng to nhẹ */
+            color: #a1ffab; /* Màu chữ khi hover */
         }
 
         .account-button {
             padding: 10px 20px; /* Khoảng cách bên trong nút */
             font-size: 14px; /* Kích thước chữ */
             color: #fff; /* Màu chữ */
-            background: linear-gradient(90deg, #00aaff, #00ff99); /* Màu nền gradient */
+            background: linear-gradient(90deg, #28a745, #1e7f3b); /* Màu nền gradient */
             border: none; /* Không viền */
             border-radius: 5px; /* Bo tròn góc */
             text-decoration: none; /* Bỏ gạch chân */
-            transition: background 0.3s; /* Hiệu ứng chuyển màu */
+            transition: background 0.3s, transform 0.3s; /* Hiệu ứng chuyển màu và chuyển động */
         }
 
         .account-button:hover {
-            background: linear-gradient(90deg, #0088cc, #00cc77); /* Màu nền khi hover */
+            background: linear-gradient(90deg, #1e7f3b, #28a745); /* Màu nền khi hover */
+            transform: scale(1.05); /* Phóng to nhẹ */
         }
     </style>
 </head>
@@ -318,6 +337,8 @@
     </div>
 </body>
 </html>
+
+
                                         </div>
                                     </div>
                                 </div>
