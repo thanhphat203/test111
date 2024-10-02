@@ -227,7 +227,7 @@
                         </div>
                         <div class="swiper-pagination"></div>
                         <div class="box-inner box-inner--rounded">
-                            <h2 class="title title--h3 title__separate" style="color: green;">JOIN WEB 3 TODAY</h2>
+                            <h2 class="title title--h3 title__separate" style="color: green;">Skill Language</h2>
 <!DOCTYPE html>
 <html lang="vi-VN">
 <head>
@@ -238,50 +238,54 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4; /* Màu nền nhẹ nhàng */
-            color: #333; /* Màu chữ tối */
+            background-color: #0f0f0f; /* Nền tối */
+            color: #fff; /* Màu chữ sáng */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Chiếm toàn bộ chiều cao */
+            margin: 0;
         }
 
         .account-container {
-            max-width: 600px;
-            margin: 20px auto;
+            max-width: 400px;
             padding: 20px;
-            border: 2px solid #28a745;
-            border-radius: 10px;
-            background-color: #ffffff; /* Nền trắng */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+            border-radius: 15px;
+            background: linear-gradient(180deg, #1a1a1a, #2c2c2c);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            text-align: center; /* Canh giữa */
         }
 
         .account-container h2 {
             color: #28a745;
-            text-align: center;
             font-size: 24px;
-            margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+            margin-bottom: 20px;
         }
 
         .account-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 10px; /* Khoảng cách trong */
+            padding: 15px;
             border-radius: 8px;
-            margin-bottom: 10px; /* Khoảng cách giữa các mục */
-            background-color: #f9f9f9; /* Nền nhẹ cho các mục */
-            transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+            margin-bottom: 10px;
+            background-color: #3a3a3a;
+            transition: transform 0.3s, background-color 0.3s;
         }
 
         .account-item:hover {
-            background-color: #e9ffe9; /* Màu nền sáng hơn khi hover */
+            transform: scale(1.02); /* Phóng to khi hover */
+            background-color: #4a4a4a; /* Nền sáng hơn khi hover */
         }
 
         .account-item span {
             color: #28a745;
             font-weight: bold;
-            font-size: 18px; /* Kích thước chữ lớn hơn */
+            font-size: 18px;
         }
 
         .account-button {
-            padding: 10px 20px;
+            padding: 10px 15px;
             font-size: 16px;
             color: #fff;
             background: linear-gradient(90deg, #00aaff, #00ff99);
@@ -294,8 +298,15 @@
 
         .account-button:hover {
             background: linear-gradient(90deg, #0088cc, #00cc77);
-            transform: scale(1.05); /* Phóng to nhẹ */
+            transform: translateY(-2px); /* Nhấc lên nhẹ */
             box-shadow: 0 10px 20px rgba(0, 170, 255, 0.7);
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .account-container {
+                width: 90%;
+            }
         }
     </style>
 </head>
