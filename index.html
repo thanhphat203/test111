@@ -61,13 +61,7 @@
             </div>
         </div>
     </div>
-    <main class="main">
-        <div class="container gutter-top">
-            <div class="row sticky-parent">
-                <!-- Sidebar -->
-                <aside class="col-12 col-md-12 col-xl-3">
-                    <div class="sidebar box pb-0 sticky-column">
-                        <!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="vi-VN">
 <head>
     <meta charset="utf-8">
@@ -81,13 +75,27 @@
             padding: 20px; /* Padding cho toàn bộ body */
         }
 
+        .container {
+            max-width: 1200px; /* Chiều rộng tối đa cho container */
+            margin: 0 auto; /* Căn giữa */
+            padding: 20px; /* Padding cho container */
+        }
+
         .text-center {
             text-align: center; /* Căn giữa nội dung */
+            margin-bottom: 20px; /* Khoảng cách dưới */
         }
 
         .ft-logo {
             width: 100px; /* Kích thước logo */
             margin-bottom: 20px; /* Khoảng cách dưới logo */
+            border-radius: 50%; /* Bo tròn logo */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Đổ bóng cho logo */
+            transition: transform 0.3s; /* Hiệu ứng chuyển động */
+        }
+
+        .ft-logo:hover {
+            transform: scale(1.1); /* Phóng to logo khi hover */
         }
 
         .title {
@@ -120,18 +128,41 @@
             margin-left: 5px; /* Khoảng cách bên trái biểu tượng */
             vertical-align: middle; /* Căn giữa theo chiều dọc */
         }
+
+        /* Hiệu ứng động cho tên */
+        .td-name {
+            display: inline-block; /* Để hiệu ứng chuyển động có tác dụng */
+            transition: color 0.3s, transform 0.3s; /* Hiệu ứng chuyển màu và chuyển động */
+        }
+
+        .td-name:hover {
+            color: #28a745; /* Màu chữ khi hover */
+            transform: scale(1.1); /* Phóng to nhẹ */
+        }
     </style>
 </head>
 <body>
-    <div class="text-center">
-        <img class="ft-logo" src="https://i.imgur.com/SIjma8Q.png" alt="Logo" />
-        <h3 class="title">
-            THÀNH PHÁT 
-            <img class="td-verify" src="https://i.imgur.com/L0GmCbu.png" alt="Xác thực" />
-            <br>
-            <div class="badge">@U2UNETWORK🔥</div>
-        </h3>
-    </div>
+    <main class="main">
+        <div class="container gutter-top">
+            <div class="row sticky-parent">
+                <!-- Sidebar -->
+                <aside class="col-12 col-md-12 col-xl-3">
+                    <div class="sidebar box pb-0 sticky-column">
+                        <div class="text-center">
+                            <img class="ft-logo" src="https://i.imgur.com/SIjma8Q.png" alt="Logo" />
+                            <h3 class="title title--h3 sidebar__user-name td-name">
+                                <span class="weight--500">THÀNH PHÁT 
+                                    <img class="td-verify" src="https://i.imgur.com/L0GmCbu.png" alt="Xác thực" />
+                                </span>
+                                <br>
+                                <div class="badge badge--gray td-bio">@U2UNETWORK🔥</div>
+                            </h3>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
 
