@@ -227,7 +227,7 @@
                         </div>
                         <div class="swiper-pagination"></div>
                         <div class="box-inner box-inner--rounded">
-                            <h2 class="title title--h3 title__separate" style="color: green;">THAM GIA WEB3 NGAY NÀO</h2>
+                            <h2 class="title title--h3 title__separate" style="color: green;">Skill Language</h2>
 <!DOCTYPE html>
 <html lang="vi-VN">
 <head>
@@ -239,7 +239,6 @@
             margin: 0;
             font-family: Arial, sans-serif;
             height: 100vh;
-            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -256,17 +255,20 @@
 
         .account-container {
             max-width: 600px;
+            margin: 20px;
             padding: 20px;
             border: 2px solid #28a745;
             border-radius: 15px;
             background-color: rgba(249, 249, 249, 0.9);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            transform: translateZ(0);
             animation: float 6s ease-in-out infinite;
         }
 
         @keyframes float {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-15px); }
         }
 
         .account-container h2 {
@@ -280,9 +282,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 0;
+            padding: 15px 0;
             border-bottom: 1px solid #ddd;
-            transition: transform 0.3s, background 0.3s;
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
         }
 
         .account-item:last-child {
@@ -290,15 +292,15 @@
         }
 
         .account-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
             background-color: #f1f1f1;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
         .account-item span {
             color: #28a745;
             font-weight: bold;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .account-button {
@@ -315,7 +317,7 @@
 
         .account-button:hover {
             background: linear-gradient(90deg, #0088cc, #00cc77);
-            transform: scale(1.1);
+            transform: scale(1.1) rotate(2deg);
             box-shadow: 0 10px 25px rgba(0, 170, 255, 0.7);
             animation: pulse 0.6s infinite;
         }
@@ -365,6 +367,8 @@
     </script>
 </body>
 </html>
+
+
 
                                         </div>
                                     </div>
