@@ -248,14 +248,21 @@
             border-radius: 15px;
             background-color: #f9f9f9;
             position: relative;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             transform: translateZ(0);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         .account-container h2 {
             color: #28a745;
             text-align: center;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
         }
 
         .account-item {
@@ -274,12 +281,13 @@
         .account-item:hover {
             transform: translateY(-5px);
             background-color: #f1f1f1;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .account-item span {
             color: #28a745;
             font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         .account-button {
@@ -296,14 +304,14 @@
 
         .account-button:hover {
             background: linear-gradient(90deg, #0088cc, #00cc77);
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 170, 255, 0.7);
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 170, 255, 0.7);
             animation: pulse 0.6s infinite;
         }
 
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.1); }
             100% { transform: scale(1); }
         }
 
@@ -346,7 +354,6 @@
     </script>
 </body>
 </html>
-
 
 
                                         </div>
