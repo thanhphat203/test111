@@ -235,6 +235,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tạo Tài Khoản</title>
     <style>
+        body {
+            background-color: #eef2f3; /* Màu nền trang */
+            font-family: Arial, sans-serif; /* Phông chữ */
+        }
+
         .account-container {
             max-width: 600px; /* Chiều rộng tối đa của container */
             margin: 20px auto; /* Căn giữa */
@@ -242,18 +247,21 @@
             border: 2px solid #28a745; /* Viền màu xanh lá cây */
             border-radius: 10px; /* Bo tròn góc */
             background-color: #f9f9f9; /* Màu nền */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng */
         }
 
         .account-container h2 {
             color: #28a745; /* Màu xanh lá cây cho tiêu đề */
+            text-align: center; /* Căn giữa tiêu đề */
         }
 
         .account-item {
             display: flex; /* Sử dụng flexbox */
             justify-content: space-between; /* Căn đều giữa các phần tử */
             align-items: center; /* Căn giữa theo chiều dọc */
-            padding: 10px 0; /* Khoảng cách giữa các mục */
+            padding: 15px 0; /* Khoảng cách giữa các mục */
             border-bottom: 1px solid #ddd; /* Đường viền giữa các mục */
+            transition: transform 0.3s; /* Hiệu ứng chuyển động */
         }
 
         .account-item:last-child {
@@ -263,10 +271,17 @@
         .account-item span {
             color: #28a745; /* Màu xanh lá cây cho tên tài khoản */
             font-weight: bold; /* In đậm tên tài khoản */
+            font-size: 18px; /* Kích thước chữ lớn hơn */
+            transition: color 0.3s, transform 0.3s; /* Hiệu ứng chuyển màu và chuyển động */
+        }
+
+        .account-item span:hover {
+            color: #007bff; /* Màu chữ khi hover */
+            transform: scale(1.1); /* Phóng to nhẹ */
         }
 
         .account-button {
-            padding: 8px 16px; /* Khoảng cách bên trong nút */
+            padding: 10px 20px; /* Khoảng cách bên trong nút */
             font-size: 14px; /* Kích thước chữ */
             color: #fff; /* Màu chữ */
             background: linear-gradient(90deg, #00aaff, #00ff99); /* Màu nền gradient */
@@ -303,12 +318,6 @@
     </div>
 </body>
 </html>
-
-
-
-
-
-
                                         </div>
                                     </div>
                                 </div>
