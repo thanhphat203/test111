@@ -235,18 +235,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tạo Tài Khoản</title>
     <style>
+        body {
+            background-color: #eef2f3;
+            font-family: Arial, sans-serif;
+        }
+
         .account-container {
             max-width: 600px;
             margin: 20px auto;
             padding: 20px;
             border: 2px solid #28a745;
-            border-radius: 10px;
+            border-radius: 15px;
             background-color: #f9f9f9;
             position: relative;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: translateZ(0);
         }
 
         .account-container h2 {
             color: #28a745;
+            text-align: center;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .account-item {
@@ -255,10 +264,17 @@
             align-items: center;
             padding: 10px 0;
             border-bottom: 1px solid #ddd;
+            transition: transform 0.3s, background 0.3s;
         }
 
         .account-item:last-child {
             border-bottom: none;
+        }
+
+        .account-item:hover {
+            transform: translateY(-5px);
+            background-color: #f1f1f1;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
 
         .account-item span {
@@ -267,7 +283,7 @@
         }
 
         .account-button {
-            padding: 8px 16px;
+            padding: 10px 20px;
             font-size: 14px;
             color: #fff;
             background: linear-gradient(90deg, #00aaff, #00ff99);
@@ -280,14 +296,14 @@
 
         .account-button:hover {
             background: linear-gradient(90deg, #0088cc, #00cc77);
-            transform: scale(1.1);
+            transform: scale(1.05);
             box-shadow: 0 10px 20px rgba(0, 170, 255, 0.7);
             animation: pulse 0.6s infinite;
         }
 
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+            50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
 
@@ -330,8 +346,6 @@
     </script>
 </body>
 </html>
-
-
 
 
 
