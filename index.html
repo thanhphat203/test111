@@ -45,23 +45,7 @@
     <link rel="stylesheet" href="./assets/styles/porn-hub.css">
     <link id="dark-style" class="dark-theme" rel="stylesheet" href="./assets/styles/style-dark.css">
 </head>
-<body class="bg-triangles">
-    <div id="top-td"></div>
-    <div class="preloader">
-        <div class="preloader__wrap">
-            <div class="circle-pulse">
-                <div class="circle-pulse__1">
-                </div>
-                <div class="circle-pulse__2">
-                </div>
-            </div>
-            <div class="preloader__progress">
-                <span>
-                </span>
-            </div>
-        </div>
-    </div>
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi-VN">
 <head>
     <meta charset="utf-8">
@@ -93,23 +77,24 @@
             font-size: 24px; /* Kích thước chữ lớn */
             position: relative; /* Để sử dụng cho hiệu ứng */
             display: inline-block; /* Để có thể căn giữa */
-            transition: color 0.3s ease; /* Hiệu ứng chuyển màu */
+            transition: color 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển màu và phóng to */
         }
 
         .title:hover {
             color: #218838; /* Màu khi hover */
-            animation: bounce 0.5s; /* Hiệu ứng nhấp nháy */
+            transform: scale(1.1); /* Phóng to nhẹ khi hover */
+            animation: pulse 0.5s infinite; /* Hiệu ứng nhấp nháy */
         }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
             }
-            40% {
-                transform: translateY(-10px);
+            50% {
+                transform: scale(1.05);
             }
-            60% {
-                transform: translateY(-5px);
+            100% {
+                transform: scale(1);
             }
         }
 
@@ -120,7 +105,19 @@
         }
     </style>
 </head>
-<body>
+<body class="bg-triangles">
+    <div id="top-td"></div>
+    <div class="preloader">
+        <div class="preloader__wrap">
+            <div class="circle-pulse">
+                <div class="circle-pulse__1"></div>
+                <div class="circle-pulse__2"></div>
+            </div>
+            <div class="preloader__progress">
+                <span></span>
+            </div>
+        </div>
+    </div>
     <main class="main">
         <div class="container gutter-top">
             <div class="row sticky-parent">
