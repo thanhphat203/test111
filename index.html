@@ -45,12 +45,36 @@
     <link rel="stylesheet" href="./assets/styles/porn-hub.css">
     <link id="dark-style" class="dark-theme" rel="stylesheet" href="./assets/styles/style-dark.css">
 </head>
-<!DOCTYPE html>
+<body class="bg-triangles">
+    <div id="top-td"></div>
+    <div class="preloader">
+        <div class="preloader__wrap">
+            <div class="circle-pulse">
+                <div class="circle-pulse__1">
+                </div>
+                <div class="circle-pulse__2">
+                </div>
+            </div>
+            <div class="preloader__progress">
+                <span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <main class="main">
+        <div class="container gutter-top">
+            <div class="row sticky-parent">
+                <!-- Sidebar -->
+                <aside class="col-12 col-md-12 col-xl-3">
+                    <div class="sidebar box pb-0 sticky-column">
+                        <div class="text-center">
+                            <img class="ft-logo" src="https://i.imgur.com/SIjma8Q.png" />
+                            <!DOCTYPE html>
 <html lang="vi-VN">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tạo Tài Khoản</title>
+    <title>Hiệu Ứng Tên</title>
     <style>
         body {
             background-color: #f4f4f4; /* Màu nền trang */
@@ -67,34 +91,24 @@
             text-align: center;
         }
 
-        .ft-logo {
-            width: 100px; /* Kích thước logo */
-            margin-bottom: 15px; /* Khoảng cách dưới logo */
-        }
-
         .title {
-            color: #28a745; /* Màu xanh lá cây cho tiêu đề */
-            font-size: 24px; /* Kích thước chữ lớn */
             position: relative; /* Để sử dụng cho hiệu ứng */
             display: inline-block; /* Để có thể căn giữa */
             transition: color 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển màu và phóng to */
         }
 
         .title:hover {
-            color: #218838; /* Màu khi hover */
+            color: #28a745; /* Màu khi hover */
             transform: scale(1.1); /* Phóng to nhẹ khi hover */
-            animation: pulse 0.5s infinite; /* Hiệu ứng nhấp nháy */
+            animation: glow 1s infinite alternate; /* Hiệu ứng phát sáng */
         }
 
-        @keyframes pulse {
+        @keyframes glow {
             0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
+                text-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
             }
             100% {
-                transform: scale(1);
+                text-shadow: 0 0 20px rgba(40, 167, 69, 1);
             }
         }
 
@@ -103,43 +117,27 @@
             font-size: 14px; /* Kích thước chữ badge */
             margin-top: 5px; /* Khoảng cách trên badge */
         }
+
+        .td-verify {
+            width: 20px; /* Kích thước biểu tượng xác minh */
+            vertical-align: middle; /* Căn giữa với chữ */
+            margin-left: 5px; /* Khoảng cách bên trái biểu tượng */
+        }
     </style>
 </head>
-<body class="bg-triangles">
-    <div id="top-td"></div>
-    <div class="preloader">
-        <div class="preloader__wrap">
-            <div class="circle-pulse">
-                <div class="circle-pulse__1"></div>
-                <div class="circle-pulse__2"></div>
-            </div>
-            <div class="preloader__progress">
-                <span></span>
-            </div>
-        </div>
-    </div>
-    <main class="main">
-        <div class="container gutter-top">
-            <div class="row sticky-parent">
-                <!-- Sidebar -->
-                <aside class="col-12 col-md-12 col-xl-3">
-                    <div class="sidebar box pb-0 sticky-column">
-                        <div class="text-center">
-                            <img class="ft-logo" src="https://i.imgur.com/SIjma8Q.png" alt="Logo" />
-                            <h3 class="title title--h3 sidebar__user-name td-name">
-                                <span class="weight--500 td-name">THÀNH PHÁT <img class="td-verify"
-                                        src="https://i.imgur.com/L0GmCbu.png" alt="Verify" /></span><br>
-                                <div class="badge badge--gray td-bio">@U2UNETWORK🔥</div>
-                            </h3>
-                        </div>
-                    </div>
-                </aside>
-            </div>
-        </div>
-    </main>
+<body>
+    <h3 class="title title--h3 sidebar__user-name td-name">
+        <span class="weight--500 td-name">THÀNH PHÁT <img class="td-verify"
+                src="https://i.imgur.com/L0GmCbu.png" alt="Verify" /></span>
+        <br>
+        <div class="badge badge--gray td-bio">@U2UNETWORK🔥</div>
+    </h3>
 </body>
 </html>
 
+                                        src="https://i.imgur.com/L0GmCbu.png" /><br>
+                                    <div class="badge badge--gray td-bio">@U2UNETWORK🔥</div>
+                            </h3>
                             <!-- Social -->
                         </div>
                         <div class="sidebar__info box-inner box-inner--rounded">
