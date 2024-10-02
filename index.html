@@ -238,7 +238,6 @@
         body {
             background-color: #eef2f3; /* Màu nền trang */
             font-family: Arial, sans-serif; /* Phông chữ */
-            overflow: hidden; /* Ẩn thanh cuộn */
         }
 
         .account-container {
@@ -249,12 +248,6 @@
             border-radius: 10px; /* Bo tròn góc */
             background-color: #f9f9f9; /* Màu nền */
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng */
-            animation: fadeIn 0.5s; /* Hiệu ứng xuất hiện */
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         .account-container h2 {
@@ -269,30 +262,27 @@
             align-items: center; /* Căn giữa theo chiều dọc */
             padding: 15px 0; /* Khoảng cách giữa các mục */
             border-bottom: 1px solid #ddd; /* Đường viền giữa các mục */
-            transition: transform 0.3s, background 0.3s; /* Hiệu ứng chuyển động */
-            cursor: pointer; /* Con trỏ chuột dạng bàn tay */
+            transition: transform 0.3s; /* Hiệu ứng chuyển động */
         }
 
         .account-item:last-child {
             border-bottom: none; /* Bỏ viền cho mục cuối */
         }
 
-        .account-item:hover {
-            transform: translateY(-3px); /* Nâng lên khi hover */
-            background-color: rgba(40, 167, 69, 0.1); /* Màu nền khi hover */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Đổ bóng nhẹ khi hover */
-        }
-
         .account-item span {
             color: #28a745; /* Màu xanh lá cây cho tên tài khoản */
             font-weight: bold; /* In đậm tên tài khoản */
             font-size: 18px; /* Kích thước chữ lớn hơn */
-            transition: color 0.3s, transform 0.3s; /* Hiệu ứng chuyển màu và chuyển động */
+            padding: 10px; /* Khoảng cách bên trong */
+            border: 2px solid #28a745; /* Khung viền cho tên tài khoản */
+            border-radius: 20px; /* Bo tròn khung viền */
+            transition: color 0.3s, transform 0.3s, background 0.3s; /* Hiệu ứng chuyển màu và chuyển động */
         }
 
         .account-item span:hover {
-            color: #007bff; /* Màu chữ khi hover */
-            transform: scale(1.1); /* Phóng to nhẹ */
+            color: #fff; /* Màu chữ khi hover */
+            background-color: #28a745; /* Màu nền khi hover */
+            transform: scale(1.05); /* Phóng to nhẹ */
         }
 
         .account-button {
