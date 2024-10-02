@@ -227,48 +227,62 @@
                         </div>
                         <div class="swiper-pagination"></div>
                         <div class="box-inner box-inner--rounded">
-                            <h2 class="title title--h3 title__separate" style="color: green;">Skill Language</h2>
+                            <h2 class="title title--h3 title__separate" style="color: green;">JOIN WEB 3 TODAY</h2>
 <!DOCTYPE html>
 <html lang="vi-VN">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tạo Tài Khoản</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4; /* Màu nền nhẹ nhàng */
+            color: #333; /* Màu chữ tối */
+        }
+
         .account-container {
             max-width: 600px;
             margin: 20px auto;
             padding: 20px;
             border: 2px solid #28a745;
             border-radius: 10px;
-            background-color: #f9f9f9;
-            position: relative;
+            background-color: #ffffff; /* Nền trắng */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
         }
 
         .account-container h2 {
             color: #28a745;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
         }
 
         .account-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
+            padding: 15px 10px; /* Khoảng cách trong */
+            border-radius: 8px;
+            margin-bottom: 10px; /* Khoảng cách giữa các mục */
+            background-color: #f9f9f9; /* Nền nhẹ cho các mục */
+            transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
         }
 
-        .account-item:last-child {
-            border-bottom: none;
+        .account-item:hover {
+            background-color: #e9ffe9; /* Màu nền sáng hơn khi hover */
         }
 
         .account-item span {
             color: #28a745;
             font-weight: bold;
+            font-size: 18px; /* Kích thước chữ lớn hơn */
         }
 
         .account-button {
-            padding: 8px 16px;
-            font-size: 14px;
+            padding: 10px 20px;
+            font-size: 16px;
             color: #fff;
             background: linear-gradient(90deg, #00aaff, #00ff99);
             border: none;
@@ -280,20 +294,8 @@
 
         .account-button:hover {
             background: linear-gradient(90deg, #0088cc, #00cc77);
-            transform: scale(1.1);
+            transform: scale(1.05); /* Phóng to nhẹ */
             box-shadow: 0 10px 20px rgba(0, 170, 255, 0.7);
-            animation: pulse 0.6s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
-        .account-button.clicked {
-            transform: scale(0.95);
-            transition: transform 0.1s ease;
         }
     </style>
 </head>
@@ -317,20 +319,8 @@
             <a href="https://www.bitget.com/en/register" class="account-button">Tạo Tài Khoản</a>
         </div>
     </div>
-
-    <script>
-        document.querySelectorAll('.account-button').forEach(button => {
-            button.addEventListener('click', function() {
-                this.classList.add('clicked');
-                setTimeout(() => {
-                    this.classList.remove('clicked');
-                }, 200);
-            });
-        });
-    </script>
 </body>
 </html>
-
 
 
 
