@@ -208,102 +208,100 @@
                         <div class="box-inner box-inner--rounded">
                             <h2 class="title title--h3 title__separate" style="color: green;">JOIN WEB 3 NOW!</h2>
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="vi-VN">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tạo Tài Khoản</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Thêm phông chữ Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #f0f0f0; /* Màu nền trang nhẹ nhàng, trung tính */
-            font-family: 'Roboto', sans-serif; /* Phông chữ hiện đại */
-            margin: 0; /* Bỏ margin mặc định */
-            padding: 20px; /* Padding cho toàn bộ body */
+            background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient đa màu */
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
         }
 
         .account-container {
-            max-width: 600px; /* Chiều rộng tối đa của container */
-            margin: auto; /* Căn giữa */
-            padding: 30px; /* Khoảng cách bên trong */
-            border-radius: 10px; /* Bo tròn góc */
-            background-color: #ffffff; /* Màu nền trắng */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
         .account-container h2 {
-            color: #005f5f; /* Màu xanh đậm cho tiêu đề */
-            text-align: center; /* Căn giữa tiêu đề */
-            margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
-            font-size: 28px; /* Kích thước chữ tiêu đề */
-            font-weight: 700; /* In đậm tiêu đề */
+            color: #005f5f;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: 700;
         }
 
         .account-item {
-            display: flex; /* Sử dụng flexbox */
-            justify-content: space-between; /* Căn đều giữa các phần tử */
-            align-items: center; /* Căn giữa theo chiều dọc */
-            padding: 15px; /* Khoảng cách giữa các mục */
-            border: 2px solid #005f5f; /* Đường viền màu xanh đậm */
-            border-radius: 8px; /* Bo tròn góc */
-            margin-bottom: 15px; /* Khoảng cách giữa các mục */
-            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; /* Hiệu ứng chuyển động */
-            background-color: #e0f2f1; /* Màu nền sáng hơn với tông xanh */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border: 2px solid #005f5f;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            background-color: #e0f2f1;
         }
 
         .account-item:hover {
-            transform: translateY(-3px); /* Di chuyển nhẹ lên khi hover */
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng khi hover */
-            border-color: #003f3f; /* Đổi màu viền khi hover */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            border-color: #003f3f;
         }
 
         .account-item span {
-            color: #004d40; /* Màu xanh đậm cho tên tài khoản */
-            font-weight: bold; /* In đậm tên tài khoản */
-            font-size: 22px; /* Kích thước chữ lớn hơn */
-            transition: transform 0.3s, color 0.3s; /* Hiệu ứng chuyển động cho chữ */
+            color: #004d40;
+            font-weight: bold;
+            font-size: 22px;
+            transition: transform 0.3s, color 0.3s;
         }
 
-        /* Hiệu ứng động riêng cho từng tên tài khoản */
         .account-item span.okx:hover {
-            color: #008080; /* Đổi màu khi hover */
-            transform: scale(1.1); /* Phóng to nhẹ khi hover */
+            color: #008080;
+            transform: scale(1.1);
         }
 
         .account-item span.binance:hover {
-            color: #00796b; /* Đổi màu khi hover */
-            transform: rotate(3deg); /* Xoay nhẹ khi hover */
+            color: #00796b;
+            transform: rotate(3deg);
         }
 
         .account-item span.bybit:hover {
-            color: #00695c; /* Đổi màu khi hover */
-            transform: translateX(3px); /* Di chuyển sang phải khi hover */
+            color: #00695c;
+            transform: translateX(3px);
         }
 
         .account-item span.bitget:hover {
-            color: #005b52; /* Đổi màu khi hover */
-            transform: scale(1.05); /* Phóng to nhẹ khi hover */
+            color: #005b52;
+            transform: scale(1.05);
         }
 
         .account-button {
-            padding: 12px 24px; /* Khoảng cách bên trong nút */
-            font-size: 16px; /* Kích thước chữ */
-            color: #ffffff; /* Màu chữ */
-            background-color: #005f5f; /* Màu xanh đậm cho nút */
-            border: none; /* Không viền */
-            border-radius: 25px; /* Bo tròn góc nhiều hơn */
-            text-decoration: none; /* Bỏ gạch chân */
-            font-weight: 600; /* In đậm chữ trong nút */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng cho nút */
-            transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển màu và chuyển động */
-            cursor: pointer; /* Con trỏ chuột khi hover */
+            padding: 12px 24px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #005f5f;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
         }
 
         .account-button:hover {
-            background-color: #004d40; /* Màu nền khi hover */
-            transform: scale(1.05); /* Phóng to nhẹ khi hover */
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Đổ bóng mạnh hơn khi hover */
+            background-color: #004d40;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
@@ -329,6 +327,7 @@
     </div>
 </body>
 </html>
+
 
 
                                         </div>
