@@ -307,11 +307,25 @@
         .banner {
             margin-top: 30px; /* Khoảng cách phía trên banner */
             text-align: center; /* Căn giữa */
+            overflow: hidden; /* Đảm bảo hiệu ứng không ra ngoài */
         }
 
         .banner img {
             max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của container */
             border-radius: 10px; /* Bo tròn góc hình ảnh */
+            animation: bounce 2s infinite; /* Hiệu ứng nhảy cho hình ảnh */
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0); /* Vị trí ban đầu */
+            }
+            40% {
+                transform: translateY(-10px); /* Nhảy lên */
+            }
+            60% {
+                transform: translateY(-5px); /* Nhảy nhẹ */
+            }
         }
     </style>
 </head>
@@ -341,6 +355,7 @@
     </div>
 </body>
 </html>
+
 
 
 
